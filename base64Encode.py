@@ -1,8 +1,12 @@
 import base64
-data = open("SF trip cost.xlsx", "r").read()
-encoded = base64.b64encode(data)
 
-decoded = base64.b64decode(encoded)
+def base64Encode(file_name):
+	data = open(file_name, "rb").read()
+	encoded = base64.b64encode(data)
+	return encoded
 
-outputFile = open("SFTripCopy.xlsx", "w")
-outputFile.write(decoded)
+def base64Decode(file_name, code):
+	data = open(file_name, "w", encoding="utf8").read()
+	decoded = base64.b64decode(encoded)
+	outputFile.write(decoded)
+	return 
